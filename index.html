@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polyglot Programming Terminal</title>
+    <title>Marco's Terminal</title>
     <style>
         * {
             margin: 0;
@@ -12,37 +12,21 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             background-color: #f3f4f6;
-        }
-
-        .container {
-            min-height: 100vh;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-        }
-
-        .title {
-            font-size: 36px;
-            font-weight: bold;
-            color: #1a202c;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        .terminal-container {
-            width: 100%;
-            max-width: 800px;
+            height: 100vh;
         }
 
         .terminal-window {
             background-color: #2d3748;
+            color: #68d391;
             border-radius: 8px;
             overflow: hidden;
-            margin-bottom: 20px;
+            max-width: 900px;
+            width: 100%;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -77,128 +61,52 @@
             background-color: #48bb78;
         }
 
-        .terminal-title {
-            margin-left: 15px;
-            font-size: 14px;
-        }
-
         .terminal-content {
-            padding: 15px;
+            padding: 20px;
             background-color: #1a202c;
-        }
-
-        .code {
-            font-family: monospace;
             color: #68d391;
             white-space: pre-wrap;
-            font-size: 14px;
+            font-size: 16px;
+        }
+
+        .terminal-content .title {
+            color: #e2e8f0;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .terminal-content .highlight {
+            color: #e53e3e;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">Polyglot Programming Terminal</h1>
-        <div class="terminal-container">
-            <!-- Python Terminal -->
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="traffic-lights">
-                        <div class="light red"></div>
-                        <div class="light yellow"></div>
-                        <div class="light green"></div>
-                    </div>
-                    <div class="terminal-title">Python Terminal</div>
-                </div>
-                <div class="terminal-content">
-                    <pre class="code">
-$ python
->>> def fibonacci(n):
-...     if n <= 1:
-...         return n
-...     else:
-...         return fibonacci(n-1) + fibonacci(n-2)
-...
->>> print(fibonacci(10))
-55
-                    </pre>
-                </div>
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="traffic-lights">
+                <div class="light red"></div>
+                <div class="light yellow"></div>
+                <div class="light green"></div>
             </div>
-
-            <!-- C Terminal -->
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="traffic-lights">
-                        <div class="light red"></div>
-                        <div class="light yellow"></div>
-                        <div class="light green"></div>
-                    </div>
-                    <div class="terminal-title">C Terminal</div>
-                </div>
-                <div class="terminal-content">
-                    <pre class="code">
-$ gcc hello.c -o hello
-$ ./hello
-Hello, World!
-                    </pre>
-                </div>
-            </div>
-
-            <!-- Java Terminal -->
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="traffic-lights">
-                        <div class="light red"></div>
-                        <div class="light yellow"></div>
-                        <div class="light green"></div>
-                    </div>
-                    <div class="terminal-title">Java Terminal</div>
-                </div>
-                <div class="terminal-content">
-                    <pre class="code">
-$ javac HelloWorld.java
-$ java HelloWorld
-Hello, World!
-                    </pre>
-                </div>
-            </div>
-
-            <!-- C++ Terminal -->
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="traffic-lights">
-                        <div class="light red"></div>
-                        <div class="light yellow"></div>
-                        <div class="light green"></div>
-                    </div>
-                    <div class="terminal-title">C++ Terminal</div>
-                </div>
-                <div class="terminal-content">
-                    <pre class="code">
-$ g++ hello.cpp -o hello
-$ ./hello
-Hello, World!
-                    </pre>
-                </div>
-            </div>
-
-            <!-- Rust Terminal -->
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="traffic-lights">
-                        <div class="light red"></div>
-                        <div class="light yellow"></div>
-                        <div class="light green"></div>
-                    </div>
-                    <div class="terminal-title">Rust Terminal</div>
-                </div>
-                <div class="terminal-content">
-                    <pre class="code">
-$ rustc hello.rs
-$ ./hello
-Hello, World!
-                    </pre>
-                </div>
-            </div>
+            <div style="margin-left: 15px; font-size: 14px;">Marco's Terminal</div>
+        </div>
+        <div class="terminal-content">
+            <span class="title">Hey, I'm Marco 😎</span><br>
+            <span>New Grad Software Engineer</span><br><br>
+            Grew up training to be a professional tennis player 🎾, then decided to devote my life to tech/startups/building 😁. I am a recent CS grad from UCF looking for early career/new grad software engineering roles.<br><br>
+            
+            <span class="title">More about me</span><br>
+            🌍  Originally from Venezuela 🇻🇪, now based in the US 🇺🇸.<br>
+            🌸  Currently working on Anime Style.<br>
+            🖥️  Some of my recent projects include Series 7 AI, Property Genius, and D4W3.<br>
+            🎯 Technical skills/frameworks: Python, Full-stack Development, Vertex AI, AWS, React, Node, Javascript, C, Java.<br>
+            🧠  Currently thinking about building AGI, building efficient decentralized coordination systems, and information theory.<br>
+            🤝  Please say hello!<br><br>
+            
+            <span class="title">Fun facts</span><br>
+            🚴 Rode a bicycle from St. Augustine, FL to LA (3200 miles, 41 days). Here's our short film.<br>
+            🤝 Core values: integrity, honesty, growth, compassion.<br>
+            🧘 Have meditated over 500 hours (Vipassana).<br>
         </div>
     </div>
 </body>

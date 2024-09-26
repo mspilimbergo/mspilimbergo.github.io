@@ -14,19 +14,27 @@
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #f3f4f6;
+        }
+
+        .container {
+            min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            padding: 20px;
+        }
+
+        .terminal-container {
+            width: 100%;
+            max-width: 800px;
         }
 
         .terminal-window {
             background-color: #2d3748;
-            color: #68d391;
             border-radius: 8px;
             overflow: hidden;
-            max-width: 900px;
-            width: 100%;
+            margin-bottom: 20px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -61,86 +69,103 @@
             background-color: #48bb78;
         }
 
+        .terminal-title {
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
         .terminal-content {
-            padding: 20px;
+            padding: 15px;
             background-color: #1a202c;
+            font-family: 'Courier New', Courier, monospace;
             color: #68d391;
             white-space: pre-wrap;
-            font-size: 16px;
-            line-height: 1.6;
-            word-wrap: break-word;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
-        .terminal-content .title {
+        .code {
+            color: #68d391;
+            white-space: pre-wrap;
+            font-size: 14px;
+        }
+
+        /* Additional styling for bullet points */
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        ul li::before {
+            content: "$ ";
             color: #e2e8f0;
-            font-size: 22px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        /* Ensure indentation and spacing */
-        .terminal-content .section-title {
-            color: #e2e8f0;
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        /* Ensure consistent spacing between paragraphs and bullet points */
-        .terminal-content p,
-        .terminal-content ul {
-            margin-bottom: 15px;
-            margin-left: 20px; /* Indent for text under headers */
-        }
-
-        .terminal-content ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .terminal-content ul li::before {
-            content: "  ";
-            display: inline-block;
-            width: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="terminal-window">
-        <div class="terminal-header">
-            <div class="traffic-lights">
-                <div class="light red"></div>
-                <div class="light yellow"></div>
-                <div class="light green"></div>
+    <div class="container">
+        <div class="terminal-container">
+            <!-- Personal Information -->
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="traffic-lights">
+                        <div class="light red"></div>
+                        <div class="light yellow"></div>
+                        <div class="light green"></div>
+                    </div>
+                    <div class="terminal-title">Marco's Terminal</div>
+                </div>
+                <div class="terminal-content">
+                    <pre class="code">
+Hey, I'm Marco 😎
+New Grad Software Engineer
+
+Grew up training to be a professional tennis player 🎾, then decided to devote my life to tech/startups/building 😁. 
+I am a recent CS grad from UCF looking for early career/new grad software engineering roles.
+                    </pre>
+                </div>
             </div>
-            <div style="margin-left: 15px; font-size: 14px;">Marco's Terminal</div>
-        </div>
-        <div class="terminal-content">
-            <span class="title">Hey, I'm Marco 😎</span>
-            <p>New Grad Software Engineer</p>
 
-            <p>
-                Grew up training to be a professional tennis player 🎾, then decided to devote my life to tech/startups/building 😁.
-                I am a recent CS grad from UCF looking for early career/new grad software engineering roles.
-            </p>
+            <!-- More About Me -->
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="traffic-lights">
+                        <div class="light red"></div>
+                        <div class="light yellow"></div>
+                        <div class="light green"></div>
+                    </div>
+                    <div class="terminal-title">More about me</div>
+                </div>
+                <div class="terminal-content">
+                    <pre class="code">
+🌍  Originally from Venezuela 🇻🇪, now based in the US 🇺🇸.
+🌸  Currently working on Anime Style.
+🖥️  Some of my recent projects include Series 7 AI, Property Genius, and D4W3.
+🎯  Technical skills/frameworks: Python, Full-stack Development, Vertex AI, AWS, React, Node, Javascript, C, Java.
+🧠  Currently thinking about building AGI, building efficient decentralized coordination systems, and information theory.
+🤝  Please say hello!
+                    </pre>
+                </div>
+            </div>
 
-            <span class="section-title">More about me</span>
-            <ul>
-                <li>🌍  Originally from Venezuela 🇻🇪, now based in the US 🇺🇸.</li>
-                <li>🌸  Currently working on Anime Style.</li>
-                <li>🖥️  Some of my recent projects include Series 7 AI, Property Genius, and D4W3.</li>
-                <li>🎯 Technical skills/frameworks: Python, Full-stack Development, Vertex AI, AWS, React, Node, Javascript, C, Java.</li>
-                <li>🧠  Currently thinking about building AGI, building efficient decentralized coordination systems, and information theory.</li>
-                <li>🤝  Please say hello!</li>
-            </ul>
-
-            <span class="section-title">Fun facts</span>
-            <ul>
-                <li>🚴 Rode a bicycle from St. Augustine, FL to LA (3200 miles, 41 days). Here's our short film.</li>
-                <li>🤝 Core values: integrity, honesty, growth, compassion.</li>
-                <li>🧘 Have meditated over 500 hours (Vipassana).</li>
-            </ul>
+            <!-- Fun Facts -->
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="traffic-lights">
+                        <div class="light red"></div>
+                        <div class="light yellow"></div>
+                        <div class="light green"></div>
+                    </div>
+                    <div class="terminal-title">Fun Facts</div>
+                </div>
+                <div class="terminal-content">
+                    <pre class="code">
+🚴  Rode a bicycle from St. Augustine, FL to LA (3200 miles, 41 days). Here's our short film.
+🤝  Core values: integrity, honesty, growth, compassion.
+🧘  Have meditated over 500 hours (Vipassana).
+                    </pre>
+                </div>
+            </div>
         </div>
     </div>
 </body>
